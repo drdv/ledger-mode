@@ -1,6 +1,8 @@
 # Install `ledger-mode` info files
 
-Run `make` to install `ledger-mode` info pages in `.`.
+Run `make` to install `ledger-mode` info pages in `.` (note that I do
+`(add-to-list 'Info-directory-list "~/git/ledger-mode/doc")` in my emacs
+config).
 
 I do this manually as I want direct access to info while not installing
 `ledger-mode` from melpa (as I want to use my folding feature). The
