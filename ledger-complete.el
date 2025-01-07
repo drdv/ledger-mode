@@ -192,7 +192,9 @@ an alist (ACCOUNT-ELEMENT . NODE)."
   (let* ((current (buffer-substring
                    (save-excursion
                      (unless (eq 'posting (ledger-thing-at-point))
-                       (error "Not on a posting line"))
+                       ;; FIXME [drdv] temporary hack to fix problem with company-mode
+                       ;;(error "Not on a posting line")
+                       )
                      (point))
                    (point)))
          (elements (and current (split-string current ":")))
